@@ -17,8 +17,8 @@ class Point:
         self.x = x
         self.y = y
 
-    def distance(self, other: "Point"):
-        return ((self.x - other.x)**2 +  (self.y - other.y)**2)**(1/2)
+    def distance(self, other:"Point"):
+        return math.hypot(self.x - other.x,self.y - other.y)
 
     pass
 
@@ -31,8 +31,14 @@ print(b)
 
 print("are a and b the same in memory:", a is b)
 
-x1 =
-y1 =
+point1 = Point()
+point1.x = 20
+point1.y = 10
 
-x2 =
-y2 =
+point2 = Point()
+point2.x = -45
+point2.y = 28
+
+print(point2.distance(point1))
+
+
